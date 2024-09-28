@@ -1,5 +1,5 @@
 # Projet Smartcities
-## Context
+## Contexte
 Dans le cadre du cours de SmartCities & IoT, je dois réaliser différents petits projets qui ont pour objectif de me faire apprendre la programation embarqué en MicroPython.
 Chaque projet se focalise sur un aspect bien précis, que ce soit l'emploi de méthodes de programmations différentes ou bien l'utilisation de divers composant tel que des moteurs, des buzzers, des potentiomètre, etc.
 
