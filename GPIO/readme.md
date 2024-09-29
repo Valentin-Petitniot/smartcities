@@ -15,13 +15,12 @@ En parallèle du timer, le programme reste dans une boucle et surveille que la v
 ### Flowchart Main
 ![GPIO Main Flowchart](Images/GPIO_main_flowchart.png)
 
-### Flowchart Bonus
-![GPIO Main Flowchart](Images/GPIO_bonus_flowchart.png)
-
-
 ## Bonus
 ### Ajouter un délai dans le passage d'une vitesse de clignotement à une autre
 Le programme est similaire mais au lieu de changer directement le mode de fonctionnement au changement de valeur du bouton poussoir. La fonction du timer appelle la fonction changeSpeed() qui fait clignoter 
 la LED une fréquence de 12.5Hz 10 fois.
+
+### Flowchart Bonus
+![GPIO Main Flowchart](Images/GPIO_bonus_flowchart.png)
 
 [^1]: Le matériel provient d'un kit de base Grove
