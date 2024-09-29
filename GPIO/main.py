@@ -23,6 +23,6 @@ while True:
     elif Mode == 2:        
         led.value(not led.value())
         utime.sleep_ms(250)
-    elif Mode > 2 & Mode != 0:        
+    else:      
         led.value(0)
         Mode = 0
