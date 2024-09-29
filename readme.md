@@ -5,6 +5,10 @@ Chaque projet se focalise sur un aspect bien précis, que ce soit l'emploi de m�
 
 Les différents projet seront réalisé grâce à un kit de base Grove avec un Raspberry Pico W. 
 
+## Répertoires
+* [GPIO](GPIO)
+* 
+
 ## Raspberry Pico W
 Les Rapsberry Pico sont des micro-contrôleurs performant, ultra-léger et ultra-petit, ce qui en fait une solution idéal pour des projets de systèmes embarqués. Les Raspberry Pico embarque avec eux une multitude de pins et de connectivités différentes, les rendants très versatiles.
 La spécificité du Raspberry Pico W est la présence d'une carte réseau ajoutant la dimension du réseau (WiFi ou Bluetooth) à la programmation sur micro-contrôleur.
