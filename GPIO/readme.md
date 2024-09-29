@@ -13,10 +13,10 @@ Le programme utilise un timer pour appeler une fonction toute les 100ms qui va r
 En parallèle du timer, le programme reste dans une boucle et surveille que la valeur du mode de foncitonnement (vitesse de clignotement de la LED) n'a pas changé.
 
 ### Flowchart Main
-![GPIO Main Flowchart](Images/GPIO_main.drawio.png)
+![GPIO Main Flowchart](Images/GPIO_main_flowchart.drawio.png)
 
 ### Flowchart Bonus
-![GPIO Main Flowchart](Images/GPIO_flowchart.drawio.png)
+![GPIO Main Flowchart](Images/GPIO_bonus_flowchart.drawio.png)
 
 
 ## Bonus
