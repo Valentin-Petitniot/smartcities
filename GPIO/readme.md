@@ -8,6 +8,9 @@ Créer un programme MicroPython qui permet de faire clignoter une LED à différ
 * Module bouton poussoir
 * Câbles
 
+## Câblage du Raspberry Pico W
+![Cablage](Images/cablage.png)
+
 ## Fonctionnement
 Le programme utilise un timer pour appeler une fonction toute les 100ms qui va regarder la valeur du bouton poussoir en prenant soin d'éviter les erreurs de rebond du bouton.
 En parallèle du timer, le programme reste dans une boucle et surveille que la valeur du mode de foncitonnement (vitesse de clignotement de la LED) n'a pas changé.
@@ -21,6 +24,6 @@ Le programme est similaire mais au lieu de changer directement le mode de foncti
 la LED une fréquence de 12.5Hz 10 fois.
 
 ### Flowchart Bonus
-![GPIO Main Flowchart](Images/GPIO_bonus_flowchart.png)
+![GPIO Bonus Flowchart](Images/GPIO_bonus_flowchart.png)
 
 [^1]: Le matériel provient d'un kit de base Grove
