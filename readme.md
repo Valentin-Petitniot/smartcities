@@ -7,7 +7,11 @@ Les différents projet seront réalisé grâce à un kit de base Grove avec un R
 
 ## Répertoires
 * [GPIO](GPIO)
-* 
+* [AD-PWM](AD-PWM)
+* [LCD](LCD)
+* [LED-neo](LED-neo)
+* [Network](Network)
+* [Sensors](Sensors)
 
 ## Raspberry Pico W
 Les Rapsberry Pico sont des micro-contrôleurs performant, ultra-léger et ultra-petit, ce qui en fait une solution idéal pour des projets de systèmes embarqués. Les Raspberry Pico embarque avec eux une multitude de pins et de connectivités différentes, les rendants très versatiles.
