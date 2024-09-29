@@ -12,7 +12,10 @@ Créer un programme MicroPython qui permet de faire clignoter une LED à différ
 Le programme utilise un timer pour appeler une fonction toute les 100ms qui va regarder la valeur du bouton poussoir en prenant soin d'éviter les erreurs de rebond du bouton.
 En parallèle du timer, le programme reste dans une boucle et surveille que la valeur du mode de foncitonnement (vitesse de clignotement de la LED) n'a pas changé.
 
-### Flowchart main
+### Flowchart Main
+![GPIO Main Flowchart](Images/GPIO_flowchart_main.drawio.png)
+
+### Flowchart Bonus
 ![GPIO Main Flowchart](Images/GPIO_flowchart.drawio.png)
 
 
