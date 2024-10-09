@@ -68,7 +68,7 @@ flowchart TD
             if0 -- YES --> buzM0[Buzzer muted]
                 buzM0 --> wait0[Wait 1 second]
                 wait0 --> Lp
-            if1 -- NO --> if1{alarm = 1 ?}
+            if0 -- NO --> if1{alarm = 1 ?}
                 if1 -- YES --> buzM1[Buzzer muted]
                     buzM1 --> actLed[Led Blinking 0,5Hz]
                     actLed --> wait1[Wait 1 second]
