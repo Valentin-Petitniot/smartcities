@@ -26,4 +26,15 @@ Le programme travail avec une boucle et un timer.
 2. Le timer appelle une fonction toutes les 100ms afin de regarder l'état du potentiomètre et ainsi, changer le volume du buzzer en "temps réel".
 
 ## Flowchart du fonctionnement
+```mermaid
+flowchart TD
+    Tlt[Loop start] --> j{j<10?}
+    j -- NO --> Le[Loop End]
+    j -- YES --> Lp{End list ?}
+        Lp -- No --> Pn[Play Note] --> Lp    
+        Lp -- Yes --> Att[Wait 1 second] --> j
 
+    Tim[Function Timer] --> Rp[Potentiometre Reading]
+    Rp --> Vin[Volume = Potentiometre]
+    Vin --> fin[Function end]
+```
