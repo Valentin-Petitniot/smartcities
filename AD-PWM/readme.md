@@ -9,7 +9,7 @@ Créer un programme MicroPython qui permet de gérer le volume d'une mélodie jo
 * Câbles
 
 ## Câblage du Raspberry Pi Pico W
-![Cablage_adpwm][Images_adpwm/cablage.png]
+![Cablage_adpwm][AD-PWM/Images_adpwm/cablage.png]
 
 ## Fonctionnement
 Le programme travail avec une boucle et un timer. 
