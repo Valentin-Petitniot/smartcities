@@ -15,6 +15,8 @@ Créeer un programme MicroPython qui permet de gérer un thermostat à plusieurs
 ![cablage_LCD](Images/cablage.png)
 
 ## Fonctionnement
+Afin de faciliter la communication avec le capteur de température/humidité et l'écran LCD, nous avons utilisés les librairies lcd1604 et dht11 recommander dans la documentation du kit utilisé.
+
 Le programme fonctionne avec deux Threads.
 1. Thread Principal
     Dans ce Thread, on trouve un boucle chargé de faire une série d'opération et d'attendre une seconde avant de les refaires.
