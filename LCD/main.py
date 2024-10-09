@@ -18,25 +18,32 @@ dht = DHT(18)
 
 # declaration
 Running = True
+RunningTh = True
 consTemp = 15
 temp = 0
 diffConsTemp = 0
+global alarm
 alarm = 0
+buzzer.freq(698)
+buzzer.duty_u16(0)
     
 def LedBlinking():            
-    while Running == True:
-        print('alarm: ' + str(alarm))
+    while RunningTh == True:
+        # print('[TH]alarm: ' + str(alarm))
         if alarm == 1:
+            buzzer.duty_u16(0) #  Mute le buzzer
             led.value(1)
             utime.sleep_ms(500)
             led.value(0)
-            utime.sleep_ms(500)
+            utime.sleep_ms(500)                        
         if alarm == 2:
+            buzzer.duty_u16(32500) # Fais sonner le buzzer
             led.value(1)
-            utime.sleep_ms(250)
+            utime.sleep_ms(150)
             led.value(0)
-            utime.sleep_ms(250)
+            utime.sleep_ms(150)
         if alarm == 0:
+            buzzer.duty_u16(0) #  Mute le buzzer
             led.value(0)
             utime.sleep_ms(1000)
 
@@ -45,7 +52,7 @@ def LedBlinking():
         
 _thread.start_new_thread(LedBlinking, ())
 
-try:
+try:    
     while Running == True:           
         # Lecture Potentiomètre
         consTemp = potar.read_u16()
@@ -56,24 +63,41 @@ try:
         temp,humid = dht.readTempHumid()  
 
         diffConsTemp = temp - consTemp
-        print('diff: ' + str(diffConsTemp))
-        if diffConsTemp < 0:
-            if diffConsTemp <= 3:
+        # print('diff: ' + str(diffConsTemp))
+        if diffConsTemp > 0:
+            if diffConsTemp >= 3:
                 alarm = 2
-            if diffConsTemp <= 0:
-                alarm = 0
-            else:
+                # print('[Main] alarm = 2')  
+                d.clear()              
+                d.setCursor(0,0)
+                d.print('ALARM !!!!!')    
+            else :
                 alarm = 1
+                # print('[Main] alarm = 1')
+                d.clear()
+                d.setCursor(0,1)
+                d.print('Ambient: ' + str(round(temp,2)))  
+                d.setCursor(0,0)
+                d.print('Set: ' + str(consTemp))    
+        else:
+            alarm = 0
+            # print('[Main] alarm = 0')
+            # Affichage        
+            d.clear()
+            d.setCursor(0,1)
+            d.print('Ambient: ' + str(round(temp,2)))  
+            d.setCursor(0,0)
+            d.print('Set: ' + str(consTemp))    
+            
+        utime.sleep_ms(1000)        
 
+    _thread.exit()
 
-        # Affichage
-        d.setCursor(0,1)
-        d.print('Ambient: ' + str(round(temp,2)))  
-        d.setCursor(0,0)
-        d.print('Set: ' + str(consTemp))    
-        utime.sleep_ms(1000)
+except KeyboardInterrupt:        
+    Running = False
+    
+except SystemExit:
+    RunningTh = False
 
-except KeyboardInterrupt:
-    print('Program Finished')
 finally:
-    Running = False    
+    print('Program finished')    
