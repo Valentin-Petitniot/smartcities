@@ -63,8 +63,8 @@ flowchart TD
 ```mermaid
 flowchart TD
     Tp[Start Secondary Thread] --> Lp{Still Running ?}
-        Lp --> NO --> EndLoop[Loop End]
-        Lp --> YES --> if0{alarm = 0 ?}
+        Lp -- NO --> EndLoop[Loop End]
+        Lp -- YES --> if0{alarm = 0 ?}
             if0 -- YES --> buzM0[Buzzer muted]
                 buzM0 --> wait0[Wait 1 second]
                 wait0 --> Lp
