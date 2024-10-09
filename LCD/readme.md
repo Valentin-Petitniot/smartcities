@@ -57,7 +57,12 @@ flowchart TD
         Dc2 -- NO --> al1[alarm = 1]
         al1 --> disp1[Display info]
         disp1 --> wait1[Wait 1 second]
-        wait1 --> Lp
-    
+        wait1 --> Lp    
+```
+
+```mermaid
+flowchart TD
+    Tp[Start Secondary Thread] --> Lp{Still Running ?}
+    Lp --> NO --> EndLoop[Loop End]
 ```
     
