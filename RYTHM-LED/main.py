@@ -1,6 +1,7 @@
 import neopixel
 from machine import I2C, ADC, Pin
 import utime
+import random
 
 # Colors Couple
 BLACK = (0, 0, 0)
@@ -21,24 +22,16 @@ led = neopixel.NeoPixel(p, 1)
 
 while True:
     average = 0
-    for i in range (1000):
-        noise = SOUND_SENSOR.read_u16()/256
-        average = average + noise
-    average = average/1000
-    print(noise)
+    for i in range (50):
+        noise = SOUND_SENSOR.read_u16()
+        average = average + noise        
+    average = average/50        
 
-    if noise < 25:
-        led.fill(GREEN)
-        led.write()
-        utime.sleep_ms(500)
-    if noise >= 25 and noise < 50:
-        led.fill(YELLOW)
-        led.write()
-        utime.sleep_ms(500)
-    if noise > 50:
-        led.fill(RED)
-        led.write()
-        utime.sleep_ms(500)
+    if average > 15500:
+        print(average)
+        led.fill(random.choice(COLORS))
+        led.write()        
+        utime.sleep_ms(100)
 
     
         

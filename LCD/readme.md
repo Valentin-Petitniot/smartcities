@@ -1,6 +1,6 @@
 # Système de contrôle de température
 ## Objectif
-Créeer un programme MicroPython qui permet de gérer un thermostat à plusieurs états.
+Créer un programme MicroPython qui permet de gérer un thermostat à plusieurs états.
 
 ## Matériels:
 * Microcontrôleur compatible MicroPython (Rapsberry Pi Pico W)
